@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Freedom Commercial Partners acquires, develops and operates government-leased and healthcare real estate in secondary markets.">
-<link rel="icon" type="image/png" href="eagle_logo.png">
+<link rel="icon" type="image/png" href="eagle.png">
 <title>Freedom Commercial Partners</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap">
@@ -31,7 +31,7 @@
   /* Masthead */
   .mast{background:var(--navy);color:#fff;border-bottom:3px solid var(--gold)}
   .mast .wrap{display:flex;align-items:center;gap:18px;padding-block:18px}
-  .mast img{width:74px;height:auto;flex:none}
+  .mast .eagle{width:86px;height:auto;flex:none;display:block}
   .mast .name{font-family:var(--display);font-size:22px;line-height:1.15}
   .mast .tag{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft);margin-top:4px}
   .mast .contact{margin-left:auto;font-size:14px;color:#c9d3de;text-decoration:none;border:1px solid rgba(255,255,255,.28);padding:8px 14px;border-radius:2px;white-space:nowrap}
@@ -39,12 +39,12 @@
 
   /* Hero */
   .hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-deep) 100%);color:#fff;position:relative;overflow:hidden}
-  .hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;padding-block:72px 64px}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-block:72px 64px}
   .hero h1{font-size:clamp(30px,4.2vw,46px);line-height:1.18;color:#fff}
   .hero h1 em{font-style:italic;color:var(--gold-soft)}
   .hero p{font-size:18px;color:#c9d3de;max-width:56ch;margin:20px 0 0}
   .hero .art{display:flex;justify-content:center}
-  .hero .art img{width:min(100%,300px);height:auto;filter:drop-shadow(0 12px 28px rgba(0,0,0,.45))}
+  .hero .art .eagle{width:min(100%,420px);height:auto;filter:drop-shadow(0 14px 30px rgba(0,0,0,.5))}
 
   /* Sections */
   section{padding-block:64px}
@@ -78,11 +78,11 @@
   @media (max-width:760px){
     .hero .wrap{grid-template-columns:1fr;padding-block:48px 44px}
     .hero .art{order:-1}
-    .hero .art img{width:min(60%,220px)}
+    .hero .art .eagle{width:min(70%,260px)}
     .two,.contact-sec .wrap{grid-template-columns:1fr;gap:28px}
     .facts{grid-template-columns:1fr;gap:20px}
     .mast .contact{display:none}
-    .mast img{width:60px}
+    .mast .eagle{width:64px}
     section{padding-block:48px}
   }
 </style>
@@ -91,7 +91,7 @@
 <body>
 <header class="mast">
   <div class="wrap">
-    <img src="eagle_logo.png" alt="Golden eagle — Freedom Commercial Partners">
+    <img class="eagle" src="eagle.png" alt="Golden eagle — Freedom Commercial Partners">
     <div>
       <div class="name">Freedom Commercial Partners</div>
       <div class="tag">Government &amp; Healthcare Real Estate</div>
@@ -108,7 +108,7 @@
       <p>We acquire, develop and operate the buildings that public agencies and healthcare providers depend on every day — with a focus on the secondary markets that larger investors overlook.</p>
     </div>
     <div class="art">
-      <img src="eagle_logo.png" alt="">
+      <img class="eagle" src="eagle.png" alt="">
     </div>
   </div>
 </div>
