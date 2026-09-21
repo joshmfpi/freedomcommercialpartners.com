@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Freedom Commercial Partners acquires, develops and operates government-leased and healthcare real estate in secondary markets.">
+<link rel="icon" type="image/png" href="eagle_logo.png">
+<title>Freedom Commercial Partners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --navy:#12304f; --navy-deep:#0c223a; --gold:#c8a127; --gold-soft:#e3cf8a;
+    --ink:#212a31; --slate:#5a6b7b; --mist:#edf1f6; --rule:#b8c5d3; --paper:#ffffff;
+    --bg:var(--paper); --fg:var(--ink); --muted:var(--slate); --line:var(--rule); --band:var(--mist);
+    --display:"Libre Baskerville", Georgia, "Times New Roman", serif;
+    --sans:"Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){ --bg:#0c1622; --fg:#e6ebf1; --muted:#9fb0c2; --line:#2b3d52; --band:#12213a; --navy:#0c1a2b; --navy-deep:#08131f; }
+  }
+  :root[data-theme="dark"]{ --bg:#0c1622; --fg:#e6ebf1; --muted:#9fb0c2; --line:#2b3d52; --band:#12213a; --navy:#0c1a2b; --navy-deep:#08131f; }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding-inline:24px}
+  h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance}
+  .eyebrow{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+
+  /* Masthead */
+  .mast{background:var(--navy);color:#fff;border-bottom:3px solid var(--gold)}
+  .mast .wrap{display:flex;align-items:center;gap:18px;padding-block:18px}
+  .mast img{width:74px;height:auto;flex:none}
+  .mast .name{font-family:var(--display);font-size:22px;line-height:1.15}
+  .mast .tag{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft);margin-top:4px}
+  .mast .contact{margin-left:auto;font-size:14px;color:#c9d3de;text-decoration:none;border:1px solid rgba(255,255,255,.28);padding:8px 14px;border-radius:2px;white-space:nowrap}
+  .mast .contact:hover{border-color:var(--gold);color:#fff}
+
+  /* Hero */
+  .hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-deep) 100%);color:#fff;position:relative;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;padding-block:72px 64px}
+  .hero h1{font-size:clamp(30px,4.2vw,46px);line-height:1.18;color:#fff}
+  .hero h1 em{font-style:italic;color:var(--gold-soft)}
+  .hero p{font-size:18px;color:#c9d3de;max-width:56ch;margin:20px 0 0}
+  .hero .art{display:flex;justify-content:center}
+  .hero .art img{width:min(100%,300px);height:auto;filter:drop-shadow(0 12px 28px rgba(0,0,0,.45))}
+
+  /* Sections */
+  section{padding-block:64px}
+  .band{background:var(--band)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:32px}
+  .col{border-top:2px solid var(--gold);padding-top:22px}
+  .col h3{font-size:24px;margin-bottom:10px}
+  .col p{margin:0 0 10px;color:var(--muted)}
+  .col ul{margin:12px 0 0;padding-left:0;list-style:none;display:grid;gap:8px}
+  .col li{padding-left:20px;position:relative;font-size:16px}
+  .col li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:2px;background:var(--gold)}
+  h2{font-size:clamp(26px,3vw,34px);line-height:1.2;margin-top:8px}
+  .lede{max-width:64ch;color:var(--muted);margin:16px 0 0;font-size:18px}
+
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px}
+  .fact{border-left:2px solid var(--line);padding-left:18px}
+  .fact b{display:block;font-family:var(--display);font-size:20px;font-weight:400;margin-bottom:6px}
+  .fact span{color:var(--muted);font-size:16px}
+
+  /* Contact */
+  .contact-sec .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+  .btn{display:inline-block;background:var(--gold);color:var(--navy);text-decoration:none;font-weight:600;letter-spacing:.04em;padding:14px 22px;border-radius:2px;font-size:16px}
+  .btn:hover{background:#d8b23a}
+  .btn:focus-visible,.mast .contact:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+  .who{color:var(--muted);font-size:16px;margin:14px 0 0}
+  .who strong{color:var(--fg);font-weight:600}
+
+  footer{background:var(--navy);color:#9fb0c2;font-size:13px;border-top:3px solid var(--gold)}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:22px}
+
+  @media (max-width:760px){
+    .hero .wrap{grid-template-columns:1fr;padding-block:48px 44px}
+    .hero .art{order:-1}
+    .hero .art img{width:min(60%,220px)}
+    .two,.contact-sec .wrap{grid-template-columns:1fr;gap:28px}
+    .facts{grid-template-columns:1fr;gap:20px}
+    .mast .contact{display:none}
+    .mast img{width:60px}
+    section{padding-block:48px}
+  }
+</style>
+
+</head>
+<body>
+<header class="mast">
+  <div class="wrap">
+    <img src="eagle_logo.png" alt="Golden eagle — Freedom Commercial Partners">
+    <div>
+      <div class="name">Freedom Commercial Partners</div>
+      <div class="tag">Government &amp; Healthcare Real Estate</div>
+    </div>
+    <a class="contact" href="mailto:support@freedomcommercialpartners.com">support@freedomcommercialpartners.com</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Owners, developers &amp; long-term partners</div>
+      <h1>Real estate that serves the communities <em>where healthcare and government work.</em></h1>
+      <p>We acquire, develop and operate the buildings that public agencies and healthcare providers depend on every day — with a focus on the secondary markets that larger investors overlook.</p>
+    </div>
+    <div class="art">
+      <img src="eagle_logo.png" alt="">
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">What we do</div>
+    <h2>Two asset classes, one standard of stewardship.</h2>
+    <p class="lede">Mission-critical tenants need landlords who understand how their facilities are funded, leased and used. That is the whole of our business.</p>
+    <div class="two">
+      <div class="col">
+        <h3>Government Facilities</h3>
+        <p>We own and develop properties leased to federal agencies, including new construction and build-to-suit upfits designed to an agency's specifications.</p>
+        <ul>
+          <li>USDA and GSA-leased office and service centers</li>
+          <li>Build-to-suit development and tenant upfits</li>
+          <li>Acquisition of existing government-leased buildings</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Healthcare Properties</h3>
+        <p>We invest in medical office and outpatient buildings in secondary and tertiary markets, where community providers need stable, well-run space.</p>
+        <ul>
+          <li>Medical office and outpatient facilities</li>
+          <li>Long-term partnerships with community providers</li>
+          <li>Secondary-market focus across the Southeast and Midwest</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow">How we work</div>
+    <h2>Principals, not intermediaries.</h2>
+    <div class="facts">
+      <div class="fact"><b>Long-term hold</b><span>We buy and build to own, so tenants and communities get a landlord who plans in decades.</span></div>
+      <div class="fact"><b>Direct relationships</b><span>Owners, agencies and providers work with the partners themselves, from first call to closing.</span></div>
+      <div class="fact"><b>Disciplined growth</b><span>A growing portfolio of federally leased and healthcare assets, added one well-underwritten deal at a time.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-sec">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Get in touch</div>
+      <h2>Have a property, a site, or a requirement?</h2>
+      <p class="who"><strong>We'd like to hear from</strong> owners of government-leased or medical buildings, landowners near federal or healthcare demand, brokers, and agencies with a facility need.</p>
+    </div>
+    <div>
+      <a class="btn" href="mailto:support@freedomcommercialpartners.com">Email us</a>
+      <p class="who" style="margin-top:14px">support@freedomcommercialpartners.com</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Freedom Commercial Partners. All rights reserved.</span>
+    <span>freedomcommercialpartners.com</span>
+  </div>
+</footer>
+
+</body>
+</html>
